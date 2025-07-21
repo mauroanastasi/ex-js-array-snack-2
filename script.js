@@ -56,17 +56,33 @@ const books = [
 
 // snack 2
 
-const availableBooks = books.map(b => b)
-console.log(availableBooks)
+// const availableBooks = books.map(b => b)
+// console.log(availableBooks)
 
-const discountedBooks = availableBooks.map((b) => {
-    return parseFloat((parseInt(b.price) * 0.80).toFixed(1)) + 
+// const discountedBooks = availableBooks.map((b) => {
+//     return parseFloat((parseInt(b.price) * 0.80).toFixed(1)) + 
+// })
+
+// console.log(discountedBooks)
+
+// const fullPricedBook = discountedBooks.filter((d) => {
+//     return Number.isInteger(d)
+// })
+
+// console.log(fullPricedBook)
+
+// snack 3
+
+const authors = books.map(b => b.author)
+
+
+const areAuthorsAdults = authors.every((a) => {
+    return a.age > 18
 })
+console.log(areAuthorsAdults)
 
-console.log(discountedBooks)
 
-const fullPricedBook = discountedBooks.filter((d) => {
-    return Number.isInteger(d)
-})
+authors.sort((a, b) => { return b.age - a.age })
+console.log(authors)
 
-console.log(fullPricedBook)
+// snack 4
