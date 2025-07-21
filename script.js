@@ -46,12 +46,27 @@ const books = [
 ];
 // snack 1
 
-const longBooks = books.filter(b => b.pages > 300)
-console.log(longBooks)
+// const longBooks = books.filter(b => b.pages > 300)
+// console.log(longBooks)
 
-const longBooksTitles = longBooks.map((l) => {
-    return l.title
-})
-console.log(longBooksTitles)
+// const longBooksTitles = longBooks.map((l) => {
+//     return l.title
+// })
+// console.log(longBooksTitles)
 
 // snack 2
+
+const availableBooks = books.map(b => b)
+console.log(availableBooks)
+
+const discountedBooks = availableBooks.map((b) => {
+    return parseFloat((parseInt(b.price) * 0.80).toFixed(1)) + 
+})
+
+console.log(discountedBooks)
+
+const fullPricedBook = discountedBooks.filter((d) => {
+    return Number.isInteger(d)
+})
+
+console.log(fullPricedBook)
