@@ -73,16 +73,28 @@ const books = [
 
 // snack 3
 
-const authors = books.map(b => b.author)
+// const authors = books.map(b => b.author)
 
 
-const areAuthorsAdults = authors.every((a) => {
-    return a.age > 18
-})
-console.log(areAuthorsAdults)
+// const areAuthorsAdults = authors.every((a) => {
+//     return a.age > 18
+// })
+// console.log(areAuthorsAdults)
 
 
-authors.sort((a, b) => { return b.age - a.age })
-console.log(authors)
+// authors.sort((a, b) => { return b.age - a.age })
+// console.log(authors)
 
 // snack 4
+
+const ages = books.map(b => b.author.age)
+console.log(ages)
+
+const agesSum = ages.reduce((acc, num) => {
+    return acc + num
+});
+console.log(agesSum)
+
+const media = agesSum / books.length
+
+console.log(media)
